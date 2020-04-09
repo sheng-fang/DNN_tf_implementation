@@ -5,6 +5,12 @@ Folder structure:
 
 |---fslib
 
+|---net_config
+
+|    |--- model1.ini
+
+|    |--- model2.ini
+
 |---model1.py
 
 |---model2.py
@@ -13,5 +19,7 @@ Folder structure:
 
 
 fslib: some personal functions
+
+net_config: some of architecture of networks are stored in ini file
 
 model*.py: implementation of model, including network architecture, loss function, etc.
