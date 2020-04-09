@@ -13,4 +13,5 @@ Folder structure:
 
 
 fslib: some personal functions
+
 model*.py: implementation of model, including network architecture, loss function, etc.
