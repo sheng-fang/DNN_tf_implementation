@@ -1,0 +1,383 @@
+{
+  "0": {
+    "name": "conv",
+    "filters": 64,
+    "kernel_size": 7,
+    "strides": 2,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "1": {
+    "name": "maxpooling",
+    "pool_size": 2,
+    "strides": 2
+  },
+  "2": {
+    "name": "conv",
+    "filters": 192,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "3": {
+    "name": "maxpooling",
+    "pool_size": 2,
+    "strides": 2
+  },
+  "4": {
+    "name": "conv",
+    "filters": 128,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "5": {
+    "name": "conv",
+    "filters": 256,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "6": {
+    "name": "conv",
+    "filters": 256,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "7": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "8": {
+    "name": "maxpooling",
+    "pool_size": 2,
+    "strides": 2
+  },
+  "9": {
+    "name": "conv",
+    "filters": 256,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "10": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "11": {
+    "name": "conv",
+    "filters": 256,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "12": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "13": {
+    "name": "conv",
+    "filters": 256,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "14": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "15": {
+    "name": "conv",
+    "filters": 256,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "16": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "17": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "18": {
+    "name": "conv",
+    "filters": 1024,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "19": {
+    "name": "maxpooling",
+    "pool_size": 2,
+    "strides": 2
+  },
+  "20": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "21": {
+    "name": "conv",
+    "filters": 1024,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "22": {
+    "name": "conv",
+    "filters": 512,
+    "kernel_size": 1,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "23": {
+    "name": "conv",
+    "filters": 1024,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "24": {
+    "name": "conv",
+    "filters": 1024,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "25": {
+    "name": "conv",
+    "filters": 1024,
+    "kernel_size": 3,
+    "strides": 2,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "26": {
+    "name": "conv",
+    "filters": 1024,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "27": {
+    "name": "conv",
+    "filters": 1024,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    },
+    "batch_norm": false
+  },
+  "28": {
+    "name": "flatten"
+  },
+  "29": {
+    "name": "dense",
+    "units": 4096,
+    "activation": {
+      "name":  "relu",
+      "kwargs": {
+        "alpha": 0.1
+      }
+    }
+  },
+  "30": {
+    "name": "dense",
+    "units": null,
+    "activation": {
+      "name":  "linear",
+      "kwargs": {
+      }
+    }
+  },
+  "31": {
+    "name": "reshape"
+  }
+}
