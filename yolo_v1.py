@@ -1,5 +1,10 @@
 """
 Script to define the architecture and loss function of yolo version 1
+
+Paper link: https://arxiv.org/abs/1506.02640
+
+Sheng FANG
+2020-04-14
 """
 from fslib import io_util, tf_util
 import tensorflow as tf
