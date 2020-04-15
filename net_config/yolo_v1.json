@@ -369,6 +369,12 @@
     }
   },
   "30": {
+    "name": "dropout",
+    "kwargs": {
+      "rate": 0.5
+    }
+  },
+  "31": {
     "name": "dense",
     "units": null,
     "activation": {
@@ -377,7 +383,7 @@
       }
     }
   },
-  "31": {
+  "32": {
     "name": "reshape"
   }
 }

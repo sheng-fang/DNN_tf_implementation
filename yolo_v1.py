@@ -6,9 +6,10 @@ Paper link: https://arxiv.org/abs/1506.02640
 Sheng FANG
 2020-04-14
 """
+import tqdm
 from fslib import io_util, tf_util
 import tensorflow as tf
-from tensorflow.keras.layers import Input, Dense, Flatten, Conv2D, Reshape, Activation, BatchNormalization, MaxPooling2D
+from tensorflow.keras.layers import Input, Dense, Flatten, Conv2D, Reshape, Dropout, BatchNormalization, MaxPooling2D
 from tensorflow.keras.models import Model
 
 
@@ -20,8 +21,7 @@ def build_yolov1(model_cfg, input_size, grid=(7, 7), nb_box=2, nb_class=20):
 
     inputs = Input(input_size)
     x = inputs
-    for layer_idx in range(nb_layer):
-        print("Creating layer {}/{}".format(layer_idx, nb_layer))
+    for layer_idx in tqdm.tqdm(range(nb_layer), desc="Creating layer"):
         layer_cfg = model_cfg[str(layer_idx)]
         if layer_cfg["name"] == "conv":
             curr_act = activation_map[layer_cfg["activation"]["name"]]
@@ -45,6 +45,8 @@ def build_yolov1(model_cfg, input_size, grid=(7, 7), nb_box=2, nb_class=20):
             x = Flatten()(x)
         elif layer_cfg["name"] == "reshape":
             x = Reshape(output_shape)(x)
+        elif layer_cfg["name"] == "dropout":
+            x = Dropout(**layer_cfg["kwargs"])(x)
         else:
             raise Exception("Unsupported layer name: {}".format(layer_cfg["name"]))
 
@@ -98,9 +100,10 @@ def yolo_loss_v1_2box(nb_box=2, nb_class=20):
 if __name__ == '__main__':
     cfg = io_util.load_json("net_config/yolo_v1.json")
     model = build_yolov1(cfg, (448, 448, 3))
+    model.summary()
     loss_fn = yolo_loss_v1_2box()
     opt = tf.keras.optimizers.SGD(momentum=0.9, decay=0.0005)
     model.compile(loss=loss_fn, optimizer=opt)
-    model.summary()
+
 
     print("debug line!")
