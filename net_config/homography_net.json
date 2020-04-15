@@ -1,0 +1,154 @@
+{
+  "1": {
+    "name": "conv",
+    "filters": 64,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "2": {
+    "name": "conv",
+    "filters": 64,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "3": {
+    "name": "maxpooling",
+    "pool_size": 2,
+    "strides": 2
+  },
+  "4": {
+    "name": "conv",
+    "filters": 64,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "5": {
+    "name": "conv",
+    "filters": 64,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "6": {
+    "name": "maxpooling",
+    "pool_size": 2,
+    "strides": 2
+  },
+  "7": {
+    "name": "conv",
+    "filters": 128,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "8": {
+    "name": "conv",
+    "filters": 128,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "9": {
+    "name": "maxpooling",
+    "pool_size": 2,
+    "strides": 2
+  },
+  "10": {
+    "name": "conv",
+    "filters": 128,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "11": {
+    "name": "conv",
+    "filters": 128,
+    "kernel_size": 3,
+    "strides": 1,
+    "padding": "same",
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    },
+    "batch_norm": true
+  },
+  "12": {
+    "name": "flatten"
+  },
+  "13": {
+    "name": "dropout",
+    "kwargs": {
+      "rate": 0.5
+    }
+  },
+  "14": {
+    "name": "dense",
+    "units": 1024,
+    "activation": {
+      "name": "relu",
+      "kwargs": {
+      }
+    }
+  },
+  "15": {
+    "name": "dropout",
+    "kwargs": {
+      "rate": 0.5
+    }
+  },
+  "16": {
+    "name": "dense",
+    "units": 8,
+    "activation": {
+      "name": "linear",
+      "kwargs": {
+      }
+    }
+  }
+}
